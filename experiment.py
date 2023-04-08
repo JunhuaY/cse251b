@@ -144,7 +144,7 @@ class Experiment(object):
             self.__val_losses.append(val_loss)
             self.__val_losses2.append(val_loss2)
             self.__val_losses3.append(val_loss3)
-            print("Epoch: {}, Training loss: {:.6f},Training loss2: {:.6f}, Validation loss: {:.6f} ,Validation loss2: {:.6f}, Validation loss3: {:.6f}".format(epoch, train_loss, train_loss2, val_loss, val_loss2, val_loss3))
+            print("Epoch:{}, Training loss: {:.6f},Training loss2: {:.6f}, VAL loss: {:.6f}, VAL loss2: {:.6f}, SMAPE loss: {:.6f}".format(epoch, train_loss, train_loss2, val_loss, val_loss2, val_loss3))
 
             self.__scheduler.step()
             
@@ -178,7 +178,7 @@ class Experiment(object):
             self.__val_losses.append(val_loss)
             self.__val_losses2.append(val_loss2)
             self.__val_losses3.append(val_loss3)
-            print("Epoch: {}, Training loss: {:.6f},Training loss2: {:.6f}, Validation loss: {:.6f} ,Validation loss2: {:.6f}, Validation loss3: {:.6f}".format(epoch, train_loss, train_loss2, val_loss, val_loss2, val_loss3))
+            print("Epoch:{}, Training loss: {:.6f},Training loss2: {:.6f}, VAL loss: {:.6f}, VAL loss2: {:.6f}, SMAPE loss: {:.6f}".format(epoch, train_loss, train_loss2, val_loss, val_loss2, val_loss3))
             self.__scheduler.step()
             
             if val_loss >= self.__lowest_val_loss:
