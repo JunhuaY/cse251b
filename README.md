@@ -1,5 +1,6 @@
 # cse251b - Predicting Parkinson's disease progresing using convolutional neural network
-Python main.py to run this project.
+Python main.py to run this project. The data is time-series data from real world(https://www.kaggle.com/competitions/amp-parkinsons-disease-progression-prediction/data).
+
 
 The code contains a convolutional neural network and its environment to take inputs of specific protein abundance values of month 0,6 and predict 4 scores known as UPDRS for month 0,6,12, 24 describing a patient's progress in Parkinson's disease. It can be run by running main.py. 
 A conventional CNN is applied, with a modified long rectangular filter shape, emphasizing the exploration of connections between protein abundance entries while still retaining the time sequence. The network takes in abundance values appended as 4x227 "picture", with abundance items encoded as the length and visit times encoded positionally as the width. The data is then fed through four convolutional layers with ReLU units, each with a receptive field of nx227, where the n value was increased from 2 to 3 through the layers. Two fully connected layers will transform the outcome into an 4x4 matrix, with each row of 4 UPDRS prediction scores for 0,6,12,24 months.
