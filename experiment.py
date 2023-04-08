@@ -156,7 +156,7 @@ class Experiment(object):
                 self.__lowest_val_loss = val_loss
             
             if self.__early_stop and count == self.__patience:
-                torch.save(self.__model.state_dict(), './model_weight/cnnweight')
+                torch.save(self.__model.state_dict(), 'cnnweight')
                 print("Early stopped at: {}".format(epoch))
                 break
                 
